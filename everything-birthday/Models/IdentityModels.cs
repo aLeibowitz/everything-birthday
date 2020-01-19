@@ -22,6 +22,8 @@ namespace everything_birthday.Models
     {
         public DbSet<Month> Months { get; set; }
         public DbSet<Day> Days { get; set; }
+        public DbSet<EventType> EventTypes { get; set; }
+        public DbSet<EventEntry> EventEntries { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

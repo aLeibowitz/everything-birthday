@@ -189,10 +189,19 @@
     <Compile Include="Migrations\202001181935254_RemoveDayNumber.Designer.cs">
       <DependentUpon>202001181935254_RemoveDayNumber.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001191417358_AddEventTypeTable.cs" />
+    <Compile Include="Migrations\202001191417358_AddEventTypeTable.Designer.cs">
+      <DependentUpon>202001191417358_AddEventTypeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001191530560_ChangeBirthdayToEvent.cs" />
+    <Compile Include="Migrations\202001191530560_ChangeBirthdayToEvent.Designer.cs">
+      <DependentUpon>202001191530560_ChangeBirthdayToEvent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\BirthdayEntry.cs" />
+    <Compile Include="Models\EventEntry.cs" />
     <Compile Include="Models\Day.cs" />
+    <Compile Include="Models\EventType.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Month.cs" />
@@ -284,6 +293,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001181935254_RemoveDayNumber.resx">
       <DependentUpon>202001181935254_RemoveDayNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001191417358_AddEventTypeTable.resx">
+      <DependentUpon>202001191417358_AddEventTypeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001191530560_ChangeBirthdayToEvent.resx">
+      <DependentUpon>202001191530560_ChangeBirthdayToEvent.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
