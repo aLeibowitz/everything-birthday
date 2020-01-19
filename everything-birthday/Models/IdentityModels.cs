@@ -20,6 +20,9 @@ namespace everything_birthday.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Month> Months { get; set; }
+        public DbSet<Day> Days { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
