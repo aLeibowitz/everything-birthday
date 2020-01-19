@@ -197,6 +197,10 @@
     <Compile Include="Migrations\202001191530560_ChangeBirthdayToEvent.Designer.cs">
       <DependentUpon>202001191530560_ChangeBirthdayToEvent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001191625048_AddDayNumberColumn.cs" />
+    <Compile Include="Migrations\202001191625048_AddDayNumberColumn.Designer.cs">
+      <DependentUpon>202001191625048_AddDayNumberColumn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\EventEntry.cs" />
@@ -299,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001191530560_ChangeBirthdayToEvent.resx">
       <DependentUpon>202001191530560_ChangeBirthdayToEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001191625048_AddDayNumberColumn.resx">
+      <DependentUpon>202001191625048_AddDayNumberColumn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
