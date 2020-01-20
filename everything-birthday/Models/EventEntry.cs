@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 using Microsoft.AspNet.Identity;
@@ -11,15 +12,19 @@ namespace everything_birthday.Models
     {
         public int EventEntryId { get; set; }
 
-        [Display(Name = "Whose event is it?")]
+        [Required]
         public string CelebrantName { get; set; }
 
-        public EventType EventType { get; set; }
+        [Required]
+        public EventType EventTypes { get; set; }
 
-        public Month Month { get; set; }
-        public Day Day { get; set; }
+        [Required]
+        public Month Months { get; set; }
 
-        [Display(Name = "Starting from what year? (optional)")]
+        [Required]
+        public Day Days { get; set; }
+
+
         public int? Year { get; set; }
 
         public bool Deleted { get; set; }

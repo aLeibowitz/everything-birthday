@@ -34,5 +34,6 @@ namespace everything_birthday.Models
         {
             return new ApplicationDbContext();
         }
+        
     }
 }
