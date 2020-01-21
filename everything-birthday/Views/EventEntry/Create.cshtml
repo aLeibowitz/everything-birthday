@@ -1,0 +1,80 @@
+﻿@model everything_birthday.ViewModels.EventEntryViewModel
+
+@{
+    ViewBag.Title = "Create Event";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create an Event you want us to help you remember and celebrate!</h2>
+<p>Just fill out the form below with all the important details, and leave the rest up to us!</p>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.EventEntry.CelebrantName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.EventEntry.CelebrantName, new { htmlAttributes = new { @class = "form-control", @placeholer = "Name(s) or Nickname(s)" } })
+            @Html.ValidationMessageFor(model => model.EventEntry.
+       CelebrantName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form=group">
+        @Html.LabelFor(model => model.EventEntry.EventType, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.EventEntry.EventTypeId,
+                                                new SelectList(Model.EventTypes, "EventTypeId", "EventTypeName"), "--Select--" )
+        </div>
+    </div>
+
+    <div class="form=group">
+        @Html.LabelFor(model => model.EventEntry.Month, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.EventEntry.MonthId,
+                                                new SelectList(Model.Months, "MonthId", "MonthName"), "--Select--" )
+        </div>
+    </div>
+
+    <div class="form=group">
+        @Html.LabelFor(model => model.EventEntry.Day, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.EventEntry.DayId,
+                                                new SelectList(Model.Days, "DayId", "DayNumber"), "" )
+        </div>
+    </div>
+
+
+    @Html.LabelFor(model => model.EventEntry.Year, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.EventEntry.Year, new { htmlAttributes = new { @class = "form-control", @placeholder = "####" } })
+        @Html.ValidationMessageFor(model => model.EventEntry.Year, "", new { @class = "text-danger" })
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Create" class="btn btn-default" />
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

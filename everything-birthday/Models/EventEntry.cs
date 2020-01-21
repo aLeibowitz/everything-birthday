@@ -13,18 +13,23 @@ namespace everything_birthday.Models
         public int EventEntryId { get; set; }
 
         [Required]
+        [Display(Name = "Their Name")]
         public string CelebrantName { get; set; }
 
-        [Required]
-        public EventType EventTypes { get; set; }
-
-        [Required]
-        public Month Months { get; set; }
-
-        [Required]
-        public Day Days { get; set; }
+        
+        public int EventTypeId { get; set; }
+        public EventType EventType { get; set; }
 
 
+        
+        public int MonthId { get; set; }
+        public Month Month { get; set; }
+
+        
+        public int DayId { get; set; }
+        public Day Day { get; set; }
+        
+        [Range(4,4)]
         public int? Year { get; set; }
 
         public bool Deleted { get; set; }

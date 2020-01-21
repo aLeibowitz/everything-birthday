@@ -210,6 +210,14 @@
     <Compile Include="Migrations\202001202010412_ChangeIEnumerablesToLists.Designer.cs">
       <DependentUpon>202001202010412_ChangeIEnumerablesToLists.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001211703365_ChangedToSingularFormInModel.cs" />
+    <Compile Include="Migrations\202001211703365_ChangedToSingularFormInModel.Designer.cs">
+      <DependentUpon>202001211703365_ChangedToSingularFormInModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001211925031_AddForeignKeyIDsToModel.cs" />
+    <Compile Include="Migrations\202001211925031_AddForeignKeyIDsToModel.Designer.cs">
+      <DependentUpon>202001211925031_AddForeignKeyIDsToModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\EventEntry.cs" />
@@ -278,10 +286,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\EventEntry\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\EventEntry\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -323,6 +331,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001202010412_ChangeIEnumerablesToLists.resx">
       <DependentUpon>202001202010412_ChangeIEnumerablesToLists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001211703365_ChangedToSingularFormInModel.resx">
+      <DependentUpon>202001211703365_ChangedToSingularFormInModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001211925031_AddForeignKeyIDsToModel.resx">
+      <DependentUpon>202001211925031_AddForeignKeyIDsToModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

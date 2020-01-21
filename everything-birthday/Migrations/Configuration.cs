@@ -30,7 +30,7 @@ namespace everything_birthday.Migrations
             context.EventTypes.AddOrUpdate(e => e.EventTypeName,
                 new EventType { EventTypeName = "birthday"},
                 new EventType { EventTypeName = "wedding anniversary"},
-                new EventType { EventTypeName = "special day"}
+                new EventType { EventTypeName = "other special day"}
                 );
         }
 
