@@ -25,6 +25,7 @@ namespace everything_birthday
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+            //can add "lumen." to above if want.
         }
     }
 }
