@@ -12,4 +12,6 @@ This project is still under development, but I have already gained a lot of know
 - different methods for implementing Bootstrap styling
 - using ApplicationUser (and their email address!) in an app
 
+I look forward to deploying the finished site soon, and further broadening my skills along the way!
+
 Thank you for taking the time to review my work!
