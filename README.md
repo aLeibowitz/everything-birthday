@@ -5,7 +5,7 @@ The only web app you need to help you celebrate the special days of your loved o
 This web app is to help anyone with an account (free) remember the birthdays and wedding anniversaries of their friends, family and coworkers.
 Once the user enters the name, event-type and date of the celebration, this app will automatically email them the day before to remind them.
 
-### What I Have Learned so Far
+## What I Have Learned so Far
 This project is still under development, but I have already gained a lot of knowledge and practice in areas including:
 - Code First interaction with database
 - foreign key references and one-to-many relationships
