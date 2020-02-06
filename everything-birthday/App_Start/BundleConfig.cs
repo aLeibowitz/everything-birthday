@@ -24,6 +24,7 @@ namespace everything_birthday
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Content/sketchy.bootstrap.css",
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
             //can add "lumen." to above if want.

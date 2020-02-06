@@ -1,38 +1,57 @@
 ﻿@model IEnumerable<everything_birthday.Models.EventEntry>
 
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Your Events</h2>
+<div class="jumbotron">
+    <h2>My Listed Events</h2>
+</div>
 
 <p>
     @Html.ActionLink("New Event Reminder", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
 
-    <div class="card text-white bg-info mb-3" style="max-width: 20rem;">
-        <div class="card-header">@Html.DisplayFor(modelItem => item.EventType.EventTypeName)</div>
-        <div class="card-body">
-            <h4 class="card-title">@Html.DisplayFor(modelItem => item.CelebrantName)</h4>
-            <p class="card-text">@Html.DisplayFor(modelItem => item.CelebrantName) will be celebrating their @Html.DisplayFor(modelItem => item.EventType.EventTypeName) on @Html.DisplayFor(modelItem => item.Month.MonthName) @Html.DisplayFor(modelItem => item.Day.DayNumber)! <br /> We'll remind you :)</p>
-</div>
+    @foreach (var item in Model)
+    {
+
+        if (item.EventTypeId == 1)
+        {
+<div class="card text-white bg-info mb-3" style="max-width: 20rem;">
+    <div class="card-header"><img src="~/Content/Images/partyhat.png" width="50" alt="Party Hat Icon" /></div>
+    <div class="card-body">
+        <h4 class="card-title">@Html.DisplayFor(modelItem => item.CelebrantName)</h4>
+        <p class="card-text">@Html.DisplayFor(modelItem => item.CelebrantName) will be celebrating their @Html.DisplayFor(modelItem => item.EventType.EventTypeName) on @Html.DisplayFor(modelItem => item.Month.MonthName) @Html.DisplayFor(modelItem => item.Day.DayNumber)! <br /> We'll remind you :)</p>
     </div>
 
 
-    <tr>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
+    <div>
+        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+    </div>
+</div>
+        }
 
-</table>
+        else {
+
+<div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
+    <div class="card-header"><img src="~/Content/Images/weddingrings.png" width="50" alt="Wedding Rings Icon" /></div>
+    <div class="card-body">
+        <h4 class="card-title">@Html.DisplayFor(modelItem => item.CelebrantName)</h4>
+        <p class="card-text">@Html.DisplayFor(modelItem => item.CelebrantName) will be celebrating their @Html.DisplayFor(modelItem => item.EventType.EventTypeName) on @Html.DisplayFor(modelItem => item.Month.MonthName) @Html.DisplayFor(modelItem => item.Day.DayNumber)! <br /> We'll remind you :)</p>
+    </div>
+    
+
+    <div>
+        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+    </div>
+</div>
+        }
+
+    }
