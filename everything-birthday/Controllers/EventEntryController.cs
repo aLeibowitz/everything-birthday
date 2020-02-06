@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using everything_birthday.Models;
 using everything_birthday.ViewModels;
 using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 
 namespace everything_birthday.Controllers
 {
@@ -26,8 +27,13 @@ namespace everything_birthday.Controllers
         // GET: EventEntry
         public ActionResult Index()
         {
-            var eventEntries = dbContext.EventEntries.ToList();
+            var eventEntries = dbContext.EventEntries.Include(e => e.EventType);
+            eventEntries.Include(m => m.Month);
+            eventEntries.Include(d => d.Day);
+            eventEntries.ToList();
             return View(eventEntries);
+
+
         }
 
         // GET: EventEntry/Details/5
